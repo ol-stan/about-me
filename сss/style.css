@@ -44,7 +44,7 @@ select {
     color: #ffffff;
     background-color: #ffae00;
     font-weight: bold;
-    padding: 15px;
+    padding: 15px 14px 13px 14px;
 }
 
 input::-moz-focus-inner {
@@ -155,6 +155,10 @@ h2 {
 
 }
 
+.content-my-skills {
+    width: 545px;
+}
+
 
 .content-about-me h1 {
     margin-bottom: 52px;
@@ -168,8 +172,43 @@ h2 {
     padding: 0;
     margin: 0;
     list-style: none;
+
 }
+
+.content-my-skills li {
+    font-weight: 500;
+}
+
 
 .content-about-me input {
     margin-top: 33px;
+}
+
+.content .mainer .progress {
+    margin: 15px 0 22px 0;
+}
+
+.progress {
+    display: block;
+    height: 6px;
+    position: relative;
+
+}
+
+.progress-line {
+    display: block;
+    height: 100%;
+    background-color: #ffae00;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.percent {
+    background-color: #ffae00;
+    color: #ffffff;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    padding: 0 8px;
 }
