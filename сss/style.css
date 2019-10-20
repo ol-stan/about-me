@@ -22,7 +22,7 @@ table tr,
 table td {
     border: none;
     color: #000000;
-    font-family: Arial;
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: normal;
@@ -34,22 +34,46 @@ input,
 textarea,
 select {
     outline: none;
-    font-family: Arial;
+    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border: none;
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: #ffae00;
-    font-weight: bold;
-    padding: 15px 14px 13px 14px;
 }
 
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
+}
+
+input[type="submit"],
+input[type="button"],
+.button {
+    background-color: #ffae00;
+    color: #ffffff;
+    border: none;
+    text-transform: uppercase;
+    height: 34px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.button:hover {
+    background-color: #ca8e0b;
+}
+
+input[type="submit"]:active,
+input[type="button"]:active,
+.button:active {
+    background-color: #ca8e0b;
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 34px;
 }
 
 a {
@@ -64,9 +88,11 @@ a:hover {
 h1,
 h2 {
     font-size: 24px;
-    padding: 0 0 10px 0;
+    padding: 0;
+    margin: 0 0 10px 0;
     color: #ffae00;
     text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
     font-weight: bold;
 }
 
@@ -93,6 +119,8 @@ h2 {
     color: #ffae00;
     font-size: 35px;
     text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .content {
@@ -123,6 +151,8 @@ h2 {
     text-align: center;
     padding: 0 15px;
     line-height: 24px;
+    width: 50px;
+    flex-grow: 1;
 }
 
 .oure-features .icon {
@@ -137,78 +167,53 @@ h2 {
     font-size: 35px;
 }
 
-.content .mainer {
+.column-wrapper {
     display: flex;
-    padding: 0 15px 0 0;
-    line-height: 25px;
-
+    margin: 0 -15px;
 }
 
-.content .mainer p {
-    margin: 22px 0;
-    max-width: 520px;
-
+.column-wrapper .cell {
+    flex-grow: 1;
+    width: 50px;
+    padding: 0 15px;
 }
 
-.content-about-me {
-    width: 580px;
-
+.block-skills h2 {
+    margin: 0 0 50px 0;
 }
 
-.content-my-skills {
-    width: 545px;
+.block-skills .block-progress {
+    margin: 0 0 25px 0;
 }
 
-
-.content-about-me h1 {
-    margin-bottom: 52px;
-}
-
-.content-my-skills h2 {
-    margin-bottom: 47px;
-}
-
-.content-my-skills ul {
-    padding: 0;
+.block-skills .block-progress:last-child {
     margin: 0;
-    list-style: none;
-
-}
-
-.content-my-skills li {
-    font-weight: 500;
 }
 
 
-.content-about-me input {
-    margin-top: 33px;
+.block-progress .bar {
+    border-bottom: 5px solid #ffae00;
+    text-align: right;
 }
 
-.content .mainer .progress {
-    margin: 15px 0 22px 0;
-}
-
-.progress {
-    display: block;
-    height: 6px;
-    position: relative;
-
-}
-
-.progress-line {
-    display: block;
-    height: 100%;
-    background-color: #ffae00;
-    position: relative;
-    overflow: hidden;
-
-}
-
-.percent {
+.block-progress .bar span {
     background-color: #ffae00;
     color: #ffffff;
-    position: absolute;
-    display: block;
-    bottom: 0;
+    height: 20px;
+    line-height: 25px;
     padding: 0 8px;
+    display: inline-block;
+}
+
+.block-about-me h2 {
+    margin: 0 0 50px 0;
+}
+
+.block-about-me p {
+    margin: 0 0 24px 0;
+    line-height: 25px;
+}
+
+.title {
+    font-weight: 500;
 }
